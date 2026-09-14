@@ -1,0 +1,292 @@
+/* Page Layout */
+.post-job-page {
+  min-height: 100vh;
+  background-color: #f8f9fc;
+  padding: 40px 8%;
+}
+
+/* Post Job Container */
+.post-job-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 120px);
+}
+
+.post-job-card {
+  background: white;
+  border-radius: 25px;
+  padding: 45px 50px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.post-job-header {
+  margin-bottom: 30px;
+}
+
+.post-job-header h1 {
+  font-size: 32px;
+  color: #1a1a2e;
+  margin: 0 0 8px;
+}
+
+.post-job-header p {
+  font-size: 16px;
+  color: #7a7a8a;
+  margin: 0;
+}
+
+/* Alert */
+.alert {
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideDown 0.4s ease;
+}
+
+.alert-success {
+  background-color: #f0fdf4;
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.alert-error {
+  background-color: #fef2f2;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.alert .icon {
+  font-size: 18px;
+}
+
+.alert .close-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+}
+
+.alert .close-btn:hover {
+  opacity: 1;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #7200c7;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Location Group */
+.location-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.location-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.location-label {
+  font-size: 13px;
+  color: #7a7a8a;
+  font-weight: 500;
+}
+
+/* Description Editor */
+.description-editor {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.description-editor:focus-within {
+  border-color: #7200c7;
+}
+
+.editor-toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 10px 14px;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+}
+
+.toolbar-btn {
+  padding: 4px 10px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.toolbar-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.toolbar-btn:active {
+  background-color: #d0d0d0;
+}
+
+.description-editor textarea {
+  border: none;
+  border-radius: 0;
+  padding: 16px;
+  width: 100%;
+  resize: vertical;
+  min-height: 160px;
+}
+
+.description-editor textarea:focus {
+  border-color: transparent;
+}
+
+/* Submit Button */
+.post-job-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #7200c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.post-job-button:hover {
+  background-color: #5e00a5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(114, 0, 199, 0.3);
+}
+
+.post-job-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .post-job-card {
+    padding: 30px 25px;
+  }
+
+  .post-job-header h1 {
+    font-size: 26px;
+  }
+
+  .location-group {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .editor-toolbar {
+    gap: 2px;
+  }
+
+  .toolbar-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .top-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-btn,
+  .login-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
